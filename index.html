@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Exit: Shinjuku-like Stage</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="game-shell" aria-label="Neon Exit game">
+      <canvas id="game-canvas"></canvas>
+
+      <section id="start-screen" class="screen">
+        <div class="screen-panel">
+          <p class="kicker">Stage 1 / Shinjuku-like</p>
+          <h1>Neon Exit</h1>
+          <p>
+            Find the station pass, ward key, and shrine charm. Restore the
+            gate power, avoid the watcher, then reach the green exit lantern.
+          </p>
+          <button id="start-button" type="button">Start run</button>
+        </div>
+      </section>
+
+      <section id="result-screen" class="screen hidden" aria-live="assertive">
+        <div class="screen-panel">
+          <p id="result-kicker" class="kicker">Run ended</p>
+          <h2 id="result-title">Escaped</h2>
+          <p id="result-message"></p>
+          <button id="restart-button" type="button">Start another run</button>
+        </div>
+      </section>
+
+      <section id="hud" class="hud hidden" aria-label="Player status">
+        <div class="hud-block objective">
+          <span class="label">Objective</span>
+          <strong id="objective-text">Search the alleys</strong>
+        </div>
+        <div class="hud-grid">
+          <div>
+            <span class="label">Items</span>
+            <strong id="items-text">0 / 4</strong>
+          </div>
+          <div>
+            <span class="label">Danger</span>
+            <strong id="danger-text">Low</strong>
+          </div>
+          <div>
+            <span class="label">Sanity</span>
+            <strong id="sanity-text">100</strong>
+          </div>
+          <div>
+            <span class="label">Stamina</span>
+            <strong id="stamina-text">100</strong>
+          </div>
+          <div>
+            <span class="label">Light</span>
+            <strong id="light-text">100</strong>
+          </div>
+          <div>
+            <span class="label">Seed</span>
+            <strong id="seed-text">--</strong>
+          </div>
+        </div>
+      </section>
+
+      <div id="crosshair" class="crosshair hidden" aria-hidden="true"></div>
+      <div id="prompt" class="prompt hidden" aria-live="polite"></div>
+      <div id="noise" aria-hidden="true"></div>
+
+      <div id="touch-controls" class="touch-controls hidden" aria-label="Touch controls">
+        <div class="touch-pad" id="move-pad">
+          <span></span>
+        </div>
+        <div class="touch-actions">
+          <button id="touch-interact" type="button">Use</button>
+          <button id="touch-sprint" type="button">Run</button>
+        </div>
+      </div>
+    </main>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
