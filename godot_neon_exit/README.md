@@ -1,10 +1,10 @@
 # Neon Exit Godot
 
-This is a Godot 4.7 version of the same Issue #4 playable slice. It keeps the first-person roguelike horror escape loop while using only lightweight procedural geometry, simple lights, and built-in meshes.
+This is a Godot 4.6 version of the same Issue #4 playable slice. It keeps the first-person roguelike horror escape loop while using only lightweight procedural geometry, simple lights, and built-in meshes.
 
 ## Run
 
-1. Install Godot 4.7.
+1. Install Godot 4.6.
 2. Open the `godot_neon_exit` folder as a project.
 3. Run `res://scenes/main.tscn`.
 
