@@ -1,4 +1,4 @@
-extends Reference
+extends RefCounted
 
 const STAGES := {
     "shinjuku_like": {
