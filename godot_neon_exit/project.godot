@@ -1,0 +1,22 @@
+; Engine configuration file.
+; Open this folder with Godot 3.5 LTS and run the Main scene.
+
+config_version=4
+
+[application]
+
+config/name="Neon Exit Godot"
+run/main_scene="res://scenes/main.tscn"
+config/icon=""
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+environment/default_clear_color=Color(0.02, 0.02, 0.04, 1)
